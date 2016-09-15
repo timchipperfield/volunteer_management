@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is a volunteer management system designed so that it could be used by an NGO/Government entity. It's built using Ruby on Rails with a PostgreSQL database.
 
-Things you may want to cover:
+##Deployment instructions
 
-* Ruby version
+* clone the project to your local repository
+* run bundle install on your command-ling
+* to use a locally hosted version of the app, type bin/rails serve via command-line
 
-* System dependencies
+##User Stories
 
-* Configuration
+As an administrator
+So that I can track newly recruited volunteers
+I want to be able to add volunteers
 
-* Database creation
+As an administrator
+So that I can track newly recruited volunteers
+I want to be able to add contact information for volunteers
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+As an administrator
+So that I know who my volunteers are
+I want to see the names of each volunteers and their contact details

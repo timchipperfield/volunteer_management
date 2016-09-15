@@ -1,0 +1,7 @@
+<% if @volunteers.any? %>
+  <%= @volunteers.each do |volunteer| %>
+    <h2><%= volunteer.name %> | <%= volunteer.tel %> | <%= volunteer.email %></h2>
+  <% end %>
+<% else %>
+    <h2><%= "There are no volunteers yet!" %></h2>
+<% end %>
