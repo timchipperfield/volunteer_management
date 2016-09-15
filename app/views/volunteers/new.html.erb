@@ -1,0 +1,13 @@
+<%= form_for Volunteer.new do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :tel %>
+  <%= f.text_field :tel %>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+
+  <%= f.submit %>
+
+<% end %>
