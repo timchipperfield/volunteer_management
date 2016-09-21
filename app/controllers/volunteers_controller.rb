@@ -3,6 +3,7 @@ class VolunteersController < ApplicationController
 
   def index
     @volunteers = Volunteer.all
+    p "test"
   end
 
   def new
