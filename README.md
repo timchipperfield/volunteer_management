@@ -21,3 +21,11 @@ I want to be able to add contact information for volunteers
 As an administrator
 So that I know who my volunteers are
 I want to see the names of each volunteers and their contact details
+
+As an administrator
+So that I can get rid of bad volunteers
+I want to be able to delete volunteers from the system
+
+As an user
+So that I will find the app to be of professional quality
+I want to see a presentable page

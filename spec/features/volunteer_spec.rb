@@ -18,7 +18,7 @@ feature 'volunteers page' do
     end
   end
 
-  context 'volunteer exists withcontact details' do
+  context 'volunteer exists already' do
     before do
       Volunteer.create(name: 'James Bond')
     end
@@ -27,6 +27,13 @@ feature 'volunteers page' do
       visit '/volunteers'
       expect(page).to have_content('James Bond')
       expect(page).not_to have_content('There are no volunteers yet!')
+    end
+
+    scenario 'can delete existing users' do
+      visit '/volunteers'
+      click_link('Delete James Bond')
+      expect(page).to have_content('There are no volunteers yet!')
+      expect(page).to have_content('James Bond has been deleted')
     end
   end
 

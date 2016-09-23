@@ -3,7 +3,6 @@ class VolunteersController < ApplicationController
 
   def index
     @volunteers = Volunteer.all
-    p "test"
   end
 
   def new
@@ -11,6 +10,13 @@ class VolunteersController < ApplicationController
 
   def create
     Volunteer.create(volunteer_params)
+    redirect_to '/volunteers'
+  end
+
+  def destroy
+    @volunteer = Volunteer.find(params[:id])
+    @volunteer.destroy
+    flash[:notice] = "#{@volunteer.name} has been deleted successfully"
     redirect_to '/volunteers'
   end
 

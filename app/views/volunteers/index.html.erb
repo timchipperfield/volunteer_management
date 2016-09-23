@@ -8,6 +8,7 @@
         <%= volunteer.name %>
         <%= volunteer.tel %>
         <%= volunteer.email %>
+        <%= link_to "Delete #{volunteer.name}", volunteer_path(volunteer), method: :delete %>
       </div>
     <% end %>
   <% else %>
