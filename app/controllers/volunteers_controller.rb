@@ -20,6 +20,16 @@ class VolunteersController < ApplicationController
     redirect_to '/volunteers'
   end
 
+  def edit
+    @volunteer = Volunteer.find(params[:id])
+  end
+
+  def update
+    @volunteer = Volunteer.find(params[:id])
+    @volunteer.update(volunteer_params)
+    redirect_to '/volunteers'
+  end
+
   private
 
   def volunteer_params

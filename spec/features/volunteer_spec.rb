@@ -35,6 +35,16 @@ feature 'volunteers page' do
       expect(page).to have_content('There are no volunteers yet!')
       expect(page).to have_content('James Bond has been deleted')
     end
+
+    scenario 'can edit volunteer data' do
+      visit '/volunteers'
+      click_link('Edit James Bond')
+      fill_in('Tel', :with => 6789)
+      fill_in('Email', :with => 'bond@bond.com')
+      click_button('Submit Edits')
+      expect(page).to have_content('6789')
+      expect(page).to have_content('bond@bond.com')
+    end
   end
 
 end
