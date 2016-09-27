@@ -1,0 +1,5 @@
+
+<h2>Volunteer Profile for <%= @volunteer.name %></h2>
+
+<%= link_to "Edit Information", edit_volunteer_path %>
+<%= link_to "Delete #{@volunteer.name}", volunteer_path(@volunteer), method: :delete %>

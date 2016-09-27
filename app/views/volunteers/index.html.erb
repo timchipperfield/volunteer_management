@@ -8,8 +8,8 @@
         <%= volunteer.name %>
         <%= volunteer.tel %>
         <%= volunteer.email %>
-        <%= link_to "Delete #{volunteer.name}", volunteer_path(volunteer), method: :delete %>
-        <%= link_to "Edit #{volunteer.name}", edit_volunteer_path(volunteer) %>
+        <!-- <%= link_to "Delete #{volunteer.name}", volunteer_path(volunteer), method: :delete %> -->
+        <%= link_to "See Profile for #{volunteer.name}", volunteer_path(volunteer) %>
       </div>
     <% end %>
   <% else %>

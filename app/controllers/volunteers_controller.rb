@@ -8,6 +8,10 @@ class VolunteersController < ApplicationController
   def new
   end
 
+  def show
+    @volunteer = Volunteer.find(params[:id])
+  end
+
   def create
     Volunteer.create(volunteer_params)
     redirect_to '/volunteers'
