@@ -30,6 +30,18 @@ As an administrator
 So that I can have current volunteer information
 I want to be able to change the volunteers phone number and email
 
+As an administrator
+So that non-staff do not change volunteer database
+I want to be able to sign in to use the database
+
+As an administrator
+So that I can use the database
+I want to be able to create an account
+
+As an administrator
+So that I can keep my account secure
+I want to be able to sign out
+
 As an user
 So that I will find the app to be of professional quality
 I want to see a presentable page
