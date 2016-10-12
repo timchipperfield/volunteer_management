@@ -16,12 +16,27 @@ input[type=submit] {
 
 .volunteer {
   width: 90%;
-  border-top: thick double #99cc00;
 }
 
 .volunteers {
   padding: 2%;
-  margin: 10px;
-  border: 5px solid #ff9933;
+  margin: 0px, 5px, 0px, 5px;
+  border: 3px solid #ff9933;
 
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #ff9933;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #ffe7c4;
 }

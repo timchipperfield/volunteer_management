@@ -1,17 +1,23 @@
 <h2>Volunteers in the Database</h2>
 
 <a href= '/volunteers/new'>Add Volunteer</a>
-<div class="volunteers">
+<table class="volunteers">
   <% if @volunteers.any? %>
+    <tr>
+      <th>Name</th>
+      <th>Phone Number</th>
+      <th>Email</th>
+      <th>Profile Link</th>
+    </tr>
     <% @volunteers.each do |volunteer| %>
-      <div class="volunteer">
-        <%= volunteer.name %>
-        <%= volunteer.tel %>
-        <%= volunteer.email %>
-        <%= link_to "See Profile for #{volunteer.name}", volunteer_path(volunteer) %>
-      </div>
+      <tr="volunteer">
+        <td><%= volunteer.name %></td>
+        <td><%= volunteer.tel %></td>
+        <td><%= volunteer.email %></td>
+        <td><%= link_to "Profile for #{volunteer.name}", volunteer_path(volunteer) %></td>
+      </tr>
     <% end %>
   <% else %>
-      <h2><%= "There are no volunteers yet!" %></h2>
+      <tr><%= "There are no volunteers yet!" %></tr>
   <% end %>
-</div>
+</table>
