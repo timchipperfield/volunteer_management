@@ -1,7 +1,18 @@
 require 'rails_helper'
 
 feature 'volunteers page' do
+
+  before do
+    admin = create(:admin)
+    visit '/admins/sign_in'
+    fill_in "Email", with: admin.email
+    fill_in "Password", with: admin.password
+    click_button "Log in"
+  end
+
+
   context 'no volunteers added so far' do
+
     scenario 'the user sees all volunteers at the roots' do
       visit '/volunteers'
       expect(page).to have_content('There are no volunteers yet!')

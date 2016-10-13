@@ -9,8 +9,29 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <!-- navigation bar and notices + alerts-->
+
+    <nav class="navbar navbar-default">
+      <% if admin_signed_in? %>
+        <%= link_to "Sign out", destroy_admin_session_path, method: :delete %>
+        <%= link_to "Volunteers", volunteers_path %>
+      <% else %>
+        <%= link_to "Sign up", new_admin_registration_path %>
+        <%= link_to "Sign in", new_admin_session_path %>
+      <% end %>
+    </nav>
+    <% if alert %>
+      <div class="alert alert-warning" role="alert">
+        <%= alert %>
+      </div>
+      <% end %>
+    <% if notice %>
+      <div class="alert alert-info" role="alert">
+        <%= notice %>
+      </div>
+    <% end %>
+
+    <!-- yields to further views -->
     <%= yield %>
   </body>
 </html>

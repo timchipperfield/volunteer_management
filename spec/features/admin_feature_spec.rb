@@ -10,6 +10,11 @@ feature 'user accounts' do
       expect(page).to have_link('Sign in')
     end
 
+    scenario 'user cannot view volunteers' do
+      visit '/volunteers'
+      expect(page).to have_content('You need to sign in or sign up before continuing')
+    end
+
     scenario 'a user can sign up' do
       visit '/'
       click_link('Sign up')
@@ -29,6 +34,15 @@ feature 'user accounts' do
       fill_in('Password', :with => 123456)
       click_button('Log in')
       expect(page).to have_content('Signed in successfully.')
+    end
+
+    scenario 'user can log out' do
+      click_link('Sign in')
+      fill_in('Email', :with => 'Drangus@123.com')
+      fill_in('Password', :with => 123456)
+      click_button('Log in')
+      click_link('Sign out')
+      expect(page).to have_content('Signed out successfully.')
     end
 
 
