@@ -30,14 +30,14 @@ feature 'volunteers page' do
     end
 
     scenario 'can delete existing users' do
-      click_link('See Profile for James Bond')
+      click_link('Profile for James Bond')
       click_link('Delete James Bond')
       expect(page).to have_content('There are no volunteers yet!')
       expect(page).to have_content('James Bond has been deleted')
     end
 
     scenario 'can edit volunteer data' do
-      click_link('See Profile for James Bond')
+      click_link('Profile for James Bond')
       click_link('Edit Information')
       fill_in('Tel', :with => 6789)
       fill_in('Email', :with => 'bond@bond.com')
@@ -47,7 +47,7 @@ feature 'volunteers page' do
     end
 
     scenario 'can view a particular volunteers profile' do
-      click_link('See Profile for James Bond')
+      click_link('Profile for James Bond')
       expect(page).to have_content("Volunteer Profile for")
     end
   end
