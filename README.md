@@ -45,3 +45,6 @@ I want to be able to sign out
 As an user
 So that I will find the app to be of professional quality
 I want to see a presentable page
+
+## Additional Credits
+Logo Design Originated from the image "volunteer" Stephen Borengasser via thenounproject.com
